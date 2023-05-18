@@ -6,22 +6,175 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>portfoliowebsite</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://kit.fontawesome.com/28ff118102.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo.png" alt="" class="logo">
-                    <ul>
-                        <li><a href="#"></a>Home</li>
-                        <li><a href="#"></a>About</li>
-                        <li><a href="#"></a>Services</li>
-                        <li><a href="#"></a>Portfolio</li>
-                        <li><a href="#"></a>Contact</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-		
+			<div class="container">
+				<nav>
+					<img src="images/logo.png" alt="" class="logo" />
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="header-text">
+					<p>Web /App Developer</p>
+					<h1>
+						Hi, I'm <span>Tolulope</span> Adeyemi!<br />and i am passionate
+						about providing Tech solutions
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- About section -->
+
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="about-col-1">
+						<img src="images/user.png" alt="" />
+					</div>
+					<div class="about-col-2">
+						<h1 class="sub-title">About Me</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+							voluptate dolorum dolorem officia quia laudantium nesciunt in,
+							impedit molestiae architecto debitis suscipit explicabo animi,
+							reiciendis deserunt, vero saepe doloribus unde.
+						</p>
+
+						<div class="tab-titles">
+							<p class="tab-links active-link" onclick="opentab('skills')">
+								Skills
+							</p>
+							<p class="tab-links" onclick="opentab('experience')">
+								Experience
+							</p>
+							<p class="tab-links" onclick="opentab('education')">Education</p>
+						</div>
+						<div class="tab-contents active-tab" id="skills">
+							<ul>
+								<li><span>Web Development</span><br />Web App Development</li>
+								<li>
+									<span>App Development</span><br />Building Android/iOS apps
+								</li>
+								<li>
+									<span>CMS</span><br />Content Management System Development
+								</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="experience">
+							<ul>
+								<li>
+									<span>2022 - current </span><br />Front End Web Development
+									Training at Jamasoft Ltd
+								</li>
+								<li>
+									<span>App Development </span><br />Web development training at
+									AptLearn
+								</li>
+								<li>
+									<span>2018 - 2021 </span><br />Internship at Defence
+									headquaters/media unit
+								</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="education">
+							<ul>
+								<li>
+									<span> 2022 </span><br />Front end Development at Jamasoft
+									Institute
+								</li>
+								<li>
+									<span> 2018 </span><br />B.A Masscommunication from Adekunle
+									Ajasin University
+								</li>
+								<li>
+									<span>CMS</span><br />Content Management System Development
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--   Services     -->
+
+		<div id="services">
+			<div class="container">
+				<h1 class="sub-title">My Services</h1>
+				<div class="services-list">
+					<div>
+						<i class="fa-solid fa-code"></i>
+						<h2>Web Development</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+							dolor tempore, in iure quas autem, doloremque fuga,
+						</p>
+                        <a href="#">Learn more</a>
+					</div>
+                    <div>
+						<i class="fa-brands fa-app-store"></i>
+						<h2>App Development</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+							dolor tempore, in iure quas autem, doloremque fuga, 
+						</p>
+                        <a href="#">Learn more</a>
+					</div>
+                    <div>
+						<i class="fa-solid fa-crop"></i>
+						<h2>CMS</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+							dolor tempore, in iure quas autem, doloremque fuga, 
+						</p>
+                        <a href="#">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- -------portfolio -->
+
+		<div id="portfolio">
+			<div class="container">
+				<h1 class="sub-title">My Work</h1>
+				<div class="work-list">
+					<div class="work">
+						<img src="images/work-1.png" alt="">
+					</div>
+					<div class="work">
+						<img src="images/work-2.png" alt="">
+					</div>
+					<div class="work">
+						<img src="images/work-3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var tablinks = document.getElementsByClassName("tab-links");
+			var tabcontents = document.getElementsByClassName("tab-contents");
+
+			function opentab(tabname) {
+				for (tablink of tablinks) {
+					tablink.classList.remove("active-link");
+				}
+				for (tabcontent of tabcontents) {
+					tabcontent.classList.remove("active-tab");
+				}
+				event.currentTarget.classList.add("active-link");
+				document.getElementById(tabname).classList.add("active-tab");
+			}
+		</script>
 	</body>
 </html>
